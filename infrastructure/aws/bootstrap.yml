@@ -20,12 +20,12 @@ spec:
     dhParamsBits: 2048
     subnetCIDR: 172.16.0.0/16
     sshUsers:
-    - nikever
-executor:
-  state:
-    backend: s3
-    config:
-      bucket: fury-demo-eks
-      key: fury/boostrap
-      region: eu-central-1
+    - <GITHUB_USER>
+# executor:
+#   state:
+#     backend: s3
+#     config:
+#       bucket: fury-discovery-day
+#       key: furyctl/boostrap
+#       region: eu-central-1
 provisioner: aws

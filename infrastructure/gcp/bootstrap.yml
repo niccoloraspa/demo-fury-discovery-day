@@ -14,11 +14,11 @@ spec:
   vpn:
     subnetCIDR: 172.16.0.0/16
     sshUsers:
-    - nikever
-executor:
-  state:
-    backend: gcs
-    config:
-      bucket: fury-discovery-day
-      prefix: terraform/bootstrap
+    - <GITHUB_USER>
+# executor:
+#   state:
+#     backend: gcs
+#     config:
+#       bucket: fury-discovery-day
+#       prefix: furyctl/bootstrap
 provisioner: gcp

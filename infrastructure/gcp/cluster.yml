@@ -9,7 +9,7 @@ spec:
   - 'fury-gcp-demo-cluster-pod-subnet'
   - 'fury-gcp-demo-cluster-service-subnet'
   dmzCIDRRange: 10.0.0.0/16
-  sshPublicKey: example-ssh-key
+  sshPublicKey: <EXAMPLE_SSH_PUBLIC_KEY>
   tags: {} 
   nodePools: 
   - name: fury
@@ -20,10 +20,10 @@ spec:
     - "europe-west3-a"
     instanceType: "n1-standard-2"
     volumeSize: 50
-executor:
-  state:
-    backend: gcs
-    config:
-      bucket: fury-discovery-day
-      prefix: terraform/cluster
+# executor:
+#   state:
+#     backend: gcs
+#     config:
+#       bucket: fury-discovery-day
+#       prefix: furyctl/cluster
 provisioner: gke

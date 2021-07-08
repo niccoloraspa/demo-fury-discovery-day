@@ -10,7 +10,7 @@ spec:
   - <PRIVATE_SUBNET3_ID>
   dmzCIDRRange:
   - 10.0.0.0/16
-  sshPublicKey: example-ssh-key
+  sshPublicKey: <EXAMPLE_SSH_PUBLIC_KEY>
   nodePools:
   - name: fury
     version: null
@@ -18,11 +18,11 @@ spec:
     maxSize: 3 
     instanceType: t3.large
     volumeSize: 50
-executor:
-  state:
-    backend: s3
-    config:
-      bucket: fury-discovery-day
-      key: fury/cluster
-      region: eu-central-1
+# executor:
+#   state:
+#     backend: s3
+#     config:
+#       bucket: fury-discovery-day
+#       key: furyctl/cluster
+#       region: eu-central-1
 provisioner: eks
