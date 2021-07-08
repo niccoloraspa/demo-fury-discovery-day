@@ -1,6 +1,6 @@
 kind: Bootstrap
 metadata:
-  name: fury-eks-demo
+  name: fury-aws-demo
 spec:
   networkCIDR: 10.0.0.0/16
   publicSubnetsCIDRs:

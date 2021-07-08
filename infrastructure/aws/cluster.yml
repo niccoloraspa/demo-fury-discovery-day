@@ -1,16 +1,16 @@
 kind: Cluster
 metadata:
-  name: fury-eks-demo
+  name: fury-aws-demo
 spec:
   version: 1.18
-  network: vpc-09d7976ec2aef894c
+  network: <VPC_ID>
   subnetworks:
-  - subnet-0f706d776eb6bfe9b
-  - subnet-066729da3163fb587
-  - subnet-000d6868899ad93e4
+  - <PRIVATE_SUBNET1_ID>
+  - <PRIVATE_SUBNET2_ID>
+  - <PRIVATE_SUBNET3_ID>
   dmzCIDRRange:
   - 10.0.0.0/16
-  sshPublicKey: ksNDAanO4aDzEZUBAnXNFpg5QxGfdxraxWZ0atI64NyHRitt5n3hmoGKNjZKCpEPmtY7ht3Bdas+1kX9m2mQGOEbVMcFw/2UVSpyNpNIQz6z8OkGaPXP8N+HLKG13OB+Wao/oFtZfllsDn3iP7D1cAG95+O2Gv1xft7oC3IBSoz4eK3gboqZSrqkGwL7wGNbAvEg4Y+f75lNghG4AtCuIiZuk2MfG56JScVCl62lMCHE5yOWYNPOepViuHfknVLleOYfa1ka/gAp0GiHuDMvfwv9zJloulO3yxqjq3f+1wo0WmWEzxwQOuP6QMOaaYyewyzWmoA4CoivWwyC+jLpHUD0Zu8CGph95ZnmLlhluOVZhKqiTUz5TbKZLQwIwQvMlbFPkyp5hT3gCGlAcqzvaFBilsun+F1z9Mz7IKFj/lYFwIDZBQRGPcNVmQG7BGurdg3j2cUbcniJWwftJa69ue+D04v2BYBD/n9F8CoWFaK6H0y5z8fouYZWJUX7AZ9JSVFH9KWuzkx2W/md4j1Yiac3bjFeW1SBFYpu0Co/p2iXn1PezMas7HuJO5zLqQmIBuwuZQDs9ziiCVZeSFfAuRGbGTSRkT9O7UVZdUiUy2Gwc/p2syttKOTG5ZcTT9t4Vrmw== niccolo@sighup.io_macbook
+  sshPublicKey: example-ssh-key
   nodePools:
   - name: fury
     version: null
@@ -22,7 +22,7 @@ executor:
   state:
     backend: s3
     config:
-      bucket: fury-demo-eks
+      bucket: fury-discovery-day
       key: fury/cluster
       region: eu-central-1
 provisioner: eks

@@ -19,6 +19,6 @@ executor:
   state:
     backend: gcs
     config:
-      bucket: furyctl-fury-discovery-bucket
+      bucket: fury-discovery-day
       prefix: terraform/bootstrap
 provisioner: gcp
