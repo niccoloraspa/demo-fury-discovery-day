@@ -245,13 +245,14 @@ xxx.elb.eu-west-1.amazonaws.com. 77 IN A <THIRD_IP>
 1. Get the IP address of the internal load balancer:
 
 ```bash
-kubectl get svc ingress-nginx -n ingress-nginx --no-headers | awk '{print $4}'
+kubectl get svc ingress`-nginx -n ingress-nginx --no-headers | awk '{print $4}'
 ```
 
 2. Add the following line to your local `/etc/hosts`:
 
 ```bash
-<LOADBALANCER_IP> forecastle.gcp.fury cerebro.gcp.fury kibana.gcp.fury grafana.aws.fury
+<LOADBALANCER_IP> forecastle.gcp.fury cerebro.gcp.fury kibana.gcp.fury grafana.gcp.fury
+10.1.0.5 forecastle.gcp.fury cerebro.gcp.fury kibana.gcp.fury grafana.gcp.fury
 ```
 
 ### Play around with the distro
@@ -337,6 +338,7 @@ More about Fury:
 [fury-discovery-day-repository]: https://github.com/nikever/demo-fury-discovery-day
 [fury-getting-started-repository]: https://github.com/sighupio/fury-getting-started
 [fury-getting-started-dockerfile]: https://github.com/sighupio/fury-getting-started/blob/main/utils/docker/Dockerfile
+[fury-docs]: https://docs.kubernetesfury.com/
 
 [fury-on-minikube]: https://github.com/sighupio/fury-getting-started/tree/main/fury-on-minikube
 [fury-on-eks]: https://github.com/sighupio/fury-getting-started/tree/main/fury-on-eks

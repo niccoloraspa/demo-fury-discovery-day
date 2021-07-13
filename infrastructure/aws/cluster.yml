@@ -5,12 +5,12 @@ spec:
   version: 1.18
   network: <VPC_ID>
   subnetworks:
-  - <PRIVATE_SUBNET1_ID>
-  - <PRIVATE_SUBNET2_ID>
-  - <PRIVATE_SUBNET3_ID>
+  - <PRIVATE_SUBNET_1>
+  - <PRIVATE_SUBNET_2>
+  - <PRIVATE_SUBNET_3>
   dmzCIDRRange:
   - 10.0.0.0/16
-  sshPublicKey: <EXAMPLE_SSH_PUBLIC_KEY>
+  sshPublicKey: <SSH_PUBLIC_KEY>
   nodePools:
   - name: fury
     version: null
@@ -18,11 +18,11 @@ spec:
     maxSize: 3 
     instanceType: t3.large
     volumeSize: 50
-# executor:
-#   state:
-#     backend: s3
-#     config:
-#       bucket: fury-discovery-day
-#       key: furyctl/cluster
-#       region: eu-central-1
+executor:
+  state:
+    backend: s3
+    config:
+      bucket: fury-discovery-day
+      key: furyctl/cluster
+      region: eu-central-1
 provisioner: eks

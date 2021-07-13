@@ -21,11 +21,11 @@ spec:
     subnetCIDR: 172.16.0.0/16
     sshUsers:
     - <GITHUB_USER>
-# executor:
-#   state:
-#     backend: s3
-#     config:
-#       bucket: fury-discovery-day
-#       key: furyctl/boostrap
-#       region: eu-central-1
+executor:
+  state:
+    backend: s3
+    config:
+      bucket: fury-discovery-day
+      key: furyctl/boostrap
+      region: eu-central-1
 provisioner: aws
