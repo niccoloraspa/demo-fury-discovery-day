@@ -58,7 +58,7 @@ export AWS_SECRET_ACCESS_KEY=
 export AWS_DEFAULT_REGION=
 ```
 
-5. Create an S3 Bucket and a GCP Storage Bucket to hold the Terraform starte
+5. Create an S3 Bucket and a GCP Storage Bucket to hold the Terraform state.
 
 You are all set ✌️.
 
